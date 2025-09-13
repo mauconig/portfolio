@@ -54,7 +54,7 @@ export default function Recommendations() {
                 <div className="relative">
                   {/* Quote icon */}
                   <div className="absolute -top-2 -left-2 text-blue-400/30 text-6xl font-serif">
-                    "
+                    &ldquo;
                   </div>
 
                   <div className="pl-6">
@@ -81,7 +81,7 @@ export default function Recommendations() {
                   {/* Quote end icon */}
                   <div className="flex justify-end mt-4">
                     <div className="text-blue-400/30 text-4xl font-serif transform rotate-180">
-                      "
+                      &rdquo;
                     </div>
                   </div>
                 </div>
@@ -137,8 +137,8 @@ export default function Recommendations() {
           <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-8 border border-gray-700">
             <h3 className="text-2xl font-semibold mb-4">Want to work together?</h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              I'm always open to discussing new opportunities and challenging projects.
-              Let's connect and see how I can contribute to your team's success.
+              I&apos;m always open to discussing new opportunities and challenging projects.
+              Let&apos;s connect and see how I can contribute to your team&apos;s success.
             </p>
             <button
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}

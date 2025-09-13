@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function About() {
   return (
     <section id="about" className="py-20 bg-gray-800/50">
@@ -8,7 +10,7 @@ export default function About() {
               About <span className="text-blue-400">Me</span>
             </h2>
             <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-              I'm a Computer Science Engineer from Universidad Politécnica Taiwán-Paraguay with
+              I&apos;m a Computer Science Engineer from Universidad Politécnica Taiwán-Paraguay with
               international experience through an exchange program at NTUST in Taiwan. I specialize
               in full-stack development with expertise in PHP, Laravel, Java, and modern frontend technologies.
             </p>
@@ -36,9 +38,11 @@ export default function About() {
                 {/* Profile Photo */}
                 <div className="flex justify-center">
                   <div className="relative">
-                    <img
+                    <Image
                       src="/mauricio-1.jpg"
                       alt="Mauricio Conigliaro"
+                      width={192}
+                      height={192}
                       className="w-48 h-48 object-cover rounded-2xl border-4 border-blue-400/50"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent rounded-2xl"></div>

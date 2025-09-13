@@ -109,7 +109,7 @@ export default function Projects() {
             </div>
             <h3 className="text-2xl font-semibold mb-4">Academic Recognition</h3>
             <p className="text-gray-300 max-w-2xl mx-auto mb-6">
-              My thesis on "ML-Assisted sEMG analysis applied to fitness" received an <strong className="text-blue-400">honorable mention</strong>
+              My thesis on &ldquo;ML-Assisted sEMG analysis applied to fitness&rdquo; received an <strong className="text-blue-400">honorable mention</strong>
               from Universidad Politécnica Taiwán-Paraguay, recognizing innovative application of Machine Learning in healthcare technology.
             </p>
             <div className="flex justify-center space-x-6 text-sm text-gray-400">

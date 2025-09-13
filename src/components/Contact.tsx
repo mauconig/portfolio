@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -56,9 +57,11 @@ export default function Contact() {
           <div>
             {/* Personal Photo */}
             <div className="mb-8 text-center lg:text-left">
-              <img
+              <Image
                 src="/mauricio-2.jpg"
                 alt="Mauricio Conigliaro - Contact"
+                width={128}
+                height={128}
                 className="w-32 h-32 object-cover rounded-full border-4 border-blue-400/50 mx-auto lg:mx-0 shadow-lg"
               />
             </div>
