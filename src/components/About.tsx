@@ -39,7 +39,7 @@ export default function About() {
                 <div className="flex justify-center">
                   <div className="relative">
                     <Image
-                      src="/mauricio-1.jpg"
+                      src="/portfolio/mauricio-1.jpg"
                       alt="Mauricio Conigliaro"
                       width={192}
                       height={192}

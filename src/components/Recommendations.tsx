@@ -11,7 +11,7 @@ const recommendations = [
     company: 'ITTI Digital',
     relationship: 'Manuel managed Mauricio directly',
     date: 'February 23, 2025',
-    image: '/manuel-guerra.jpeg',
+    image: '/portfolio/manuel-guerra.jpeg',
     testimonial: `I had the privilege of working with Mauricio Conigliaro at ITTI, where he stood out as a comprehensive professional in test automation, covering everything from mobile and UI testing to static code analysis and performance testing. His extensive technical knowledge and ability to solve complex problems made him a fundamental pillar within the team.
 
 Among his main achievements and strengths, I highlight:

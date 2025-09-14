@@ -58,7 +58,7 @@ export default function Contact() {
             {/* Personal Photo */}
             <div className="mb-8 text-center lg:text-left">
               <Image
-                src="/mauricio-2.jpg"
+                src="/portfolio/mauricio-2.jpg"
                 alt="Mauricio Conigliaro - Contact"
                 width={128}
                 height={128}
