@@ -1,10 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
-  const [language, setLanguage] = useState('en')
+  const { language, toggleLanguage, t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,27 +16,12 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  useEffect(() => {
-    const savedLanguage = localStorage.getItem('language')
-    if (savedLanguage) {
-      setLanguage(savedLanguage)
-    }
-  }, [])
-
-  const toggleLanguage = () => {
-    const newLanguage = language === 'en' ? 'es' : 'en'
-    setLanguage(newLanguage)
-    localStorage.setItem('language', newLanguage)
-  }
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     element?.scrollIntoView({ behavior: 'smooth' })
   }
 
-  const getText = (en: string, es: string) => {
-    return language === 'en' ? en : es
-  }
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -52,31 +38,31 @@ export default function Navigation() {
               onClick={() => scrollToSection('home')}
               className="hover:text-blue-400 transition-colors duration-200"
             >
-              {getText('Home', 'Inicio')}
+              {t('nav.home')}
             </button>
             <button
               onClick={() => scrollToSection('about')}
               className="hover:text-blue-400 transition-colors duration-200"
             >
-              {getText('About', 'Acerca')}
+              {t('nav.about')}
             </button>
             <button
               onClick={() => scrollToSection('skills')}
               className="hover:text-blue-400 transition-colors duration-200"
             >
-              {getText('Skills', 'Habilidades')}
+              {t('nav.skills')}
             </button>
             <button
               onClick={() => scrollToSection('recommendations')}
               className="hover:text-blue-400 transition-colors duration-200"
             >
-              {getText('Recommendations', 'Recomendaciones')}
+              {t('nav.recommendations')}
             </button>
             <button
               onClick={() => scrollToSection('contact')}
               className="hover:text-blue-400 transition-colors duration-200"
             >
-              {getText('Contact', 'Contacto')}
+              {t('nav.contact')}
             </button>
 
             <button

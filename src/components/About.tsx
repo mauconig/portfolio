@@ -1,33 +1,33 @@
+'use client'
+
 import Image from 'next/image'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function About() {
+  const { t } = useLanguage()
   return (
     <section id="about" className="py-20 bg-gray-800/50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl font-bold mb-6">
-              About <span className="text-blue-400">Me</span>
+              {t('about.title').split(' ')[0]} <span className="text-blue-400">{t('about.title').split(' ')[1]}</span>
             </h2>
             <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-              I&apos;m a Computer Science Engineer from Universidad Politécnica Taiwán-Paraguay with
-              international experience through an exchange program at NTUST in Taiwan. I specialize
-              in full-stack development with expertise in PHP, Laravel, Java, and modern frontend technologies.
+              {t('about.detailed.p1')}
             </p>
             <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              My thesis on ML-Assisted sEMG analysis applied to fitness earned an honorable mention,
-              demonstrating my passion for combining software engineering with cutting-edge technologies
-              like Machine Learning and AI.
+              {t('about.detailed.p2')}
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="bg-gray-700 px-4 py-2 rounded-full">
-                <span className="text-blue-400 font-semibold">3.7</span> GPA
+                <span className="text-blue-400 font-semibold">3.7</span> {t('about.badge.gpa')}
               </div>
               <div className="bg-gray-700 px-4 py-2 rounded-full">
-                <span className="text-blue-400 font-semibold">Taiwan</span> Exchange Program
+                <span className="text-blue-400 font-semibold">Taiwan</span> {t('about.badge.exchange')}
               </div>
               <div className="bg-gray-700 px-4 py-2 rounded-full">
-                <span className="text-blue-400 font-semibold">ML</span> Thesis Recognition
+                <span className="text-blue-400 font-semibold">ML</span> {t('about.badge.thesis')}
               </div>
             </div>
           </div>

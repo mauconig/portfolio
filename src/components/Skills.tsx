@@ -1,6 +1,13 @@
-const skills = [
+'use client'
+
+import { useLanguage } from '@/contexts/LanguageContext'
+
+export default function Skills() {
+  const { t } = useLanguage()
+
+  const skills = [
   {
-    category: 'Backend',
+    category: t('skills.backend'),
     items: [
       { name: 'PHP', level: 95 },
       { name: 'Laravel', level: 90 },
@@ -10,7 +17,7 @@ const skills = [
     ]
   },
   {
-    category: 'Frontend',
+    category: t('skills.frontend'),
     items: [
       { name: 'React', level: 85 },
       { name: 'JavaScript', level: 90 },
@@ -20,7 +27,7 @@ const skills = [
     ]
   },
   {
-    category: 'Databases & AI',
+    category: t('skills.databases'),
     items: [
       { name: 'SQL', level: 90 },
       { name: 'PostgreSQL', level: 85 },
@@ -31,21 +38,19 @@ const skills = [
   }
 ]
 
-const additionalTools = [
-  'Git', 'Playwright', 'Cypress', 'Postman', 'Maestro', 'Claude Code',
-  'Deep Learning', 'Data Analysis', 'Data Mining', 'Markdown', 'Unit Testing'
-]
-
-export default function Skills() {
+  const additionalTools = [
+    'Git', 'Playwright', 'Cypress', 'Postman', 'Maestro', 'Claude Code',
+    'Deep Learning', 'Data Analysis', 'Data Mining', 'Markdown', 'Unit Testing'
+  ]
   return (
     <section id="skills" className="py-20">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">
-            Technical <span className="text-blue-400">Skills</span>
+            Technical <span className="text-blue-400">{t('skills.title')}</span>
           </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Technologies and tools I use to deliver robust software solutions
+            {t('skills.subtitle')}
           </p>
         </div>
 
@@ -80,13 +85,13 @@ export default function Skills() {
 
         {/* Professional Experience Highlights */}
         <div className="mt-16 bg-gray-800/30 rounded-2xl p-8 border border-gray-700">
-          <h3 className="text-2xl font-semibold mb-8 text-center">Professional Experience</h3>
+          <h3 className="text-2xl font-semibold mb-8 text-center">{t('skills.experience.title')}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="bg-blue-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <span className="text-blue-400 text-2xl font-bold">FS</span>
               </div>
-              <h4 className="font-semibold text-white mb-2">Fullstack Developer</h4>
+              <h4 className="font-semibold text-white mb-2">{t('skills.experience.fullstack')}</h4>
               <p className="text-gray-300 text-sm">Freelancers del Paraguay</p>
               <p className="text-blue-400 text-sm">June 2025 - Present</p>
             </div>
@@ -94,7 +99,7 @@ export default function Skills() {
               <div className="bg-blue-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <span className="text-blue-400 text-2xl font-bold">SE</span>
               </div>
-              <h4 className="font-semibold text-white mb-2">Software Engineer</h4>
+              <h4 className="font-semibold text-white mb-2">{t('skills.experience.engineer')}</h4>
               <p className="text-gray-300 text-sm">ITTI Digital</p>
               <p className="text-blue-400 text-sm">Feb 2025 - June 2025</p>
             </div>
@@ -102,7 +107,7 @@ export default function Skills() {
               <div className="bg-blue-500/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <span className="text-blue-400 text-2xl font-bold">SA</span>
               </div>
-              <h4 className="font-semibold text-white mb-2">Support Analyst</h4>
+              <h4 className="font-semibold text-white mb-2">{t('skills.experience.analyst')}</h4>
               <p className="text-gray-300 text-sm">Code100</p>
               <p className="text-blue-400 text-sm">Nov 2023 - Feb 2024</p>
             </div>
@@ -111,7 +116,7 @@ export default function Skills() {
 
         {/* Additional tools */}
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-semibold mb-8">Tools & Technologies</h3>
+          <h3 className="text-2xl font-semibold mb-8">{t('skills.tools')}</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {additionalTools.map((tool) => (
               <span

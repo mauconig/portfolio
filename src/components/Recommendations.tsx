@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const recommendations = [
   {
@@ -31,15 +32,16 @@ I recommend Mauricio without hesitation. His technical level, commitment, and au
 ]
 
 export default function Recommendations() {
+  const { t } = useLanguage()
   return (
     <section id="recommendations" className="py-20 bg-gray-800/50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">
-            Professional <span className="text-blue-400">Recommendations</span>
+            Professional <span className="text-blue-400">{t('recommendations.title')}</span>
           </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            What colleagues and managers say about working with me
+            {t('recommendations.subtitle')}
           </p>
         </div>
 
@@ -135,16 +137,15 @@ export default function Recommendations() {
         {/* Call to action */}
         <div className="text-center mt-12">
           <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl p-8 border border-gray-700">
-            <h3 className="text-2xl font-semibold mb-4">Want to work together?</h3>
+            <h3 className="text-2xl font-semibold mb-4">{t('recommendations.cta.title')}</h3>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              I&apos;m always open to discussing new opportunities and challenging projects.
-              Let&apos;s connect and see how I can contribute to your team&apos;s success.
+              {t('recommendations.cta.description')}
             </p>
             <button
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105"
             >
-              Get In Touch
+              {t('recommendations.cta.button')}
             </button>
           </div>
         </div>

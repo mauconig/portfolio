@@ -1,23 +1,27 @@
+'use client'
+
 import Image from 'next/image'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Contact() {
+  const { t } = useLanguage()
 
   return (
     <section id="contact" className="py-20">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">
-            Get In <span className="text-blue-400">Touch</span>
+            {t('contact.title').split(' ').slice(0, -1).join(' ')} <span className="text-blue-400">{t('contact.title').split(' ').slice(-1)[0]}</span>
           </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            I&apos;m always open to discussing new opportunities and interesting projects
+            {t('contact.description')}
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Contact Information */}
           <div>
-            <h3 className="text-3xl font-semibold mb-8">Let&apos;s Connect</h3>
+            <h3 className="text-3xl font-semibold mb-8">{t('contact.connect')}</h3>
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
@@ -26,7 +30,7 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-gray-300">Email</p>
+                  <p className="text-gray-300">{t('contact.email')}</p>
                   <p className="text-blue-400">mauricioconigliaro1@gmail.com</p>
                 </div>
               </div>
@@ -39,7 +43,7 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-gray-300">Location</p>
+                  <p className="text-gray-300">{t('contact.location')}</p>
                   <p className="text-blue-400">Asunción, Paraguay</p>
                 </div>
               </div>
@@ -51,15 +55,15 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-gray-300">Response Time</p>
-                  <p className="text-blue-400">Within 24 hours</p>
+                  <p className="text-gray-300">{t('contact.response')}</p>
+                  <p className="text-blue-400">{t('contact.response.value')}</p>
                 </div>
               </div>
             </div>
 
             {/* Social Links */}
             <div className="mt-12">
-              <h4 className="text-xl font-semibold mb-6">Follow Me</h4>
+              <h4 className="text-xl font-semibold mb-6">{t('contact.follow')}</h4>
               <div className="flex space-x-4">
                 <a
                   href="https://github.com/mauricioconigliaro"
@@ -114,8 +118,8 @@ export default function Contact() {
       {/* Footer */}
       <footer className="mt-20 border-t border-gray-800 pt-8">
         <div className="max-w-6xl mx-auto px-6 text-center text-gray-400">
-          <p>&copy; 2024 Mauricio Conigliaro. Built with Next.js and Tailwind CSS.</p>
-          <p className="mt-2 text-sm">Computer Science Engineer | Full-stack Developer | Asunción, Paraguay</p>
+          <p>&copy; 2024 Mauricio Conigliaro. {t('contact.footer.built')}</p>
+          <p className="mt-2 text-sm">{t('contact.footer.role')}</p>
         </div>
       </footer>
     </section>
