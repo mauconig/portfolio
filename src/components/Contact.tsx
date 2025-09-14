@@ -57,13 +57,16 @@ export default function Contact() {
           <div>
             {/* Personal Photo */}
             <div className="mb-8 text-center lg:text-left">
-              <Image
-                src="/portfolio/mauricio-2.jpg"
-                alt="Mauricio Conigliaro - Contact"
-                width={128}
-                height={128}
-                className="w-32 h-32 object-cover rounded-full border-4 border-blue-400/50 mx-auto lg:mx-0 shadow-lg"
-              />
+              <div className="relative inline-block">
+                <Image
+                  src="/portfolio/mauricio-2.jpg"
+                  alt="Mauricio Conigliaro - Contact"
+                  width={200}
+                  height={200}
+                  className="w-48 h-48 object-cover rounded-2xl border-4 border-blue-400/50 shadow-xl"
+                />
+                <div className="absolute -inset-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-lg -z-10"></div>
+              </div>
             </div>
             <h3 className="text-2xl font-semibold mb-8">Let&apos;s Connect</h3>
             <div className="space-y-6">
