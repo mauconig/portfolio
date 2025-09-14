@@ -61,6 +61,21 @@ const translations = {
     'recommendations.manuel.subtitle': 'Responsible for QA integrating advanced automation, CI/CD, DevOps and testing throughout the entire lifecycle',
     'recommendations.manuel.relationship': 'Manuel managed Mauricio directly',
     'recommendations.manuel.date': 'February 23, 2025',
+    'recommendations.manuel.testimonial': `I had the privilege of working with Mauricio Conigliaro at ITTI, where he stood out as a comprehensive professional in test automation, covering everything from mobile and UI testing to static code analysis and performance testing. His extensive technical knowledge and ability to solve complex problems made him a fundamental pillar within the team.
+
+Among his main achievements and strengths, I highlight:
+
+**Automation Expert**: He implemented and optimized automation strategies in multiple areas, including mobile testing, UI, static code analysis, and performance testing.
+
+**Complex Problem Solving**: His creativity and analytical approach were key to overcoming technical roadblocks, providing innovative and efficient solutions.
+
+**Training and Mentoring**: He dedicated time to train and guide the team, ensuring continuous growth in knowledge and skills within the automation area.
+
+**Optimization and Continuous Improvement**: He always looked for ways to perfect processes and tools, achieving greater efficiency and quality in testing.
+
+**Teamwork and Collaboration**: His willingness to help and share knowledge enabled the team to face technical challenges with confidence and success.
+
+I recommend Mauricio without hesitation. His technical level, commitment, and automation skills make him an exceptional professional. I am confident that he will continue to make a difference in every challenge he undertakes.`,
 
     // Contact Section
     'contact.title': 'Get In Touch',
@@ -126,6 +141,21 @@ const translations = {
     'recommendations.manuel.subtitle': 'Responsable de QA integrando automatización avanzada, CI/CD, DevOps y testing durante todo el ciclo de vida',
     'recommendations.manuel.relationship': 'Manuel supervisó directamente a Mauricio',
     'recommendations.manuel.date': '23 de febrero de 2025',
+    'recommendations.manuel.testimonial': `Tuve el privilegio de trabajar con Mauricio Conigliaro en ITTI, donde se destacó como un profesional integral en automatización de pruebas, abarcando desde pruebas móviles y de UI hasta análisis de código estático y pruebas de rendimiento. Su amplio conocimiento técnico y su capacidad para resolver problemas complejos lo convirtieron en un pilar fundamental dentro del equipo.
+
+Entre sus principales logros y fortalezas, destaco:
+
+**Experto en Automatización**: Implementó y optimizó estrategias de automatización en múltiples áreas, incluyendo pruebas móviles, UI, análisis de código estático y pruebas de rendimiento.
+
+**Resolución de Problemas Complejos**: Su creatividad y enfoque analítico fueron clave para superar obstáculos técnicos, brindando soluciones innovadoras y eficientes.
+
+**Capacitación y Mentoría**: Dedicó tiempo a entrenar y guiar al equipo, asegurando el crecimiento continuo del conocimiento y las habilidades dentro del área de automatización.
+
+**Optimización y Mejora Continua**: Siempre buscó formas de perfeccionar procesos y herramientas, logrando mayor eficiencia y calidad en las pruebas.
+
+**Trabajo en Equipo y Colaboración**: Su disposición para ayudar y compartir conocimientos permitió al equipo enfrentar desafíos técnicos con confianza y éxito.
+
+Recomiendo a Mauricio sin dudarlo. Su nivel técnico, compromiso y habilidades en automatización lo convierten en un profesional excepcional. Confío en que seguirá marcando la diferencia en cada desafío que emprenda.`,
 
     // Contact Section
     'contact.title': 'Ponte en Contacto',

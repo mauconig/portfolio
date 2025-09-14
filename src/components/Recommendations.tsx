@@ -16,21 +16,7 @@ export default function Recommendations() {
       relationshipKey: 'recommendations.manuel.relationship',
       dateKey: 'recommendations.manuel.date',
       image: '/portfolio/manuel-guerra.jpeg',
-    testimonial: `I had the privilege of working with Mauricio Conigliaro at ITTI, where he stood out as a comprehensive professional in test automation, covering everything from mobile and UI testing to static code analysis and performance testing. His extensive technical knowledge and ability to solve complex problems made him a fundamental pillar within the team.
-
-Among his main achievements and strengths, I highlight:
-
-**Automation Expert**: He implemented and optimized automation strategies in multiple areas, including mobile testing, UI, static code analysis, and performance testing.
-
-**Complex Problem Solving**: His creativity and analytical approach were key to overcoming technical roadblocks, providing innovative and efficient solutions.
-
-**Training and Mentoring**: He dedicated time to train and guide the team, ensuring continuous growth in knowledge and skills within the automation area.
-
-**Optimization and Continuous Improvement**: He always looked for ways to perfect processes and tools, achieving greater efficiency and quality in testing.
-
-**Teamwork and Collaboration**: His willingness to help and share knowledge enabled the team to face technical challenges with confidence and success.
-
-I recommend Mauricio without hesitation. His technical level, commitment, and automation skills make him an exceptional professional. I am confident that he will continue to make a difference in every challenge he undertakes.`
+      testimonialKey: 'recommendations.manuel.testimonial'
     }
   ]
 
@@ -62,7 +48,7 @@ I recommend Mauricio without hesitation. His technical level, commitment, and au
 
                   <div className="pl-6">
                     <div className="text-gray-300 leading-relaxed space-y-4">
-                      {rec.testimonial.split('\n\n').map((paragraph, index) => {
+                      {t(rec.testimonialKey).split('\n\n').map((paragraph, index) => {
                         // Handle bold text for section headers
                         if (paragraph.includes('**')) {
                           const parts = paragraph.split('**')
