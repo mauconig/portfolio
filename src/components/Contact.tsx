@@ -99,9 +99,9 @@ export default function Contact() {
               <Image
                 src="/portfolio/mauricio-2.jpg"
                 alt="Mauricio Conigliaro - Contact"
-                width={300}
-                height={300}
-                className="w-64 h-64 lg:w-72 lg:h-72 object-cover rounded-2xl border-4 border-blue-400/50 shadow-xl"
+                width={400}
+                height={400}
+                className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-2xl border-4 border-blue-400/50 shadow-xl"
               />
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl -z-10"></div>
               <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-blue-500/20 rounded-full blur-lg"></div>
