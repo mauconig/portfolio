@@ -1,44 +1,6 @@
-'use client'
-
-import { useState } from 'react'
 import Image from 'next/image'
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-  const [statusMessage, setStatusMessage] = useState('')
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitStatus('idle')
-
-    // Simulate sending for demo purposes (GitHub Pages doesn't support server-side APIs)
-    setTimeout(() => {
-      setSubmitStatus('success')
-      setStatusMessage('Thanks for your message! Please contact me directly at mauricioconigliaro1@gmail.com')
-      setFormData({ name: '', email: '', message: '' })
-      setIsSubmitting(false)
-
-      // Clear status message after 8 seconds
-      setTimeout(() => {
-        setSubmitStatus('idle')
-        setStatusMessage('')
-      }, 8000)
-    }, 1500)
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
 
   return (
     <section id="contact" className="py-20">
@@ -52,23 +14,10 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Contact Information */}
           <div>
-            {/* Personal Photo */}
-            <div className="mb-8 text-center lg:text-left">
-              <div className="relative inline-block">
-                <Image
-                  src="/portfolio/mauricio-2.jpg"
-                  alt="Mauricio Conigliaro - Contact"
-                  width={200}
-                  height={200}
-                  className="w-48 h-48 object-cover rounded-2xl border-4 border-blue-400/50 shadow-xl"
-                />
-                <div className="absolute -inset-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-lg -z-10"></div>
-              </div>
-            </div>
-            <h3 className="text-2xl font-semibold mb-8">Let&apos;s Connect</h3>
+            <h3 className="text-3xl font-semibold mb-8">Let&apos;s Connect</h3>
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
@@ -110,7 +59,7 @@ export default function Contact() {
 
             {/* Social Links */}
             <div className="mt-12">
-              <h4 className="text-lg font-semibold mb-6">Follow Me</h4>
+              <h4 className="text-xl font-semibold mb-6">Follow Me</h4>
               <div className="flex space-x-4">
                 <a
                   href="https://github.com/mauricioconigliaro"
@@ -144,75 +93,20 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-gray-300 mb-2">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-gray-300 mb-2">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors"
-                  required
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-gray-300 mb-2">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={5}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-blue-400 focus:ring-1 focus:ring-blue-400 transition-colors resize-none"
-                  required
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className={`w-full font-semibold py-3 rounded-lg transition-all duration-300 transform hover:scale-[1.02] ${
-                  isSubmitting
-                    ? 'bg-gray-600 cursor-not-allowed'
-                    : 'bg-blue-500 hover:bg-blue-600'
-                } text-white`}
-              >
-                {isSubmitting ? (
-                  <div className="flex items-center justify-center space-x-2">
-                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                    <span>Sending...</span>
-                  </div>
-                ) : (
-                  'Send Message'
-                )}
-              </button>
-
-              {/* Status Message */}
-              {statusMessage && (
-                <div className={`mt-4 p-3 rounded-lg text-center ${
-                  submitStatus === 'success'
-                    ? 'bg-green-500/20 border border-green-500/50 text-green-400'
-                    : 'bg-red-500/20 border border-red-500/50 text-red-400'
-                }`}>
-                  {statusMessage}
-                </div>
-              )}
-            </form>
+          {/* Personal Photo */}
+          <div className="text-center">
+            <div className="relative inline-block">
+              <Image
+                src="/portfolio/mauricio-2.jpg"
+                alt="Mauricio Conigliaro - Contact"
+                width={300}
+                height={300}
+                className="w-64 h-64 lg:w-72 lg:h-72 object-cover rounded-2xl border-4 border-blue-400/50 shadow-xl"
+              />
+              <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl -z-10"></div>
+              <div className="absolute -bottom-2 -right-2 w-20 h-20 bg-blue-500/20 rounded-full blur-lg"></div>
+              <div className="absolute -top-2 -left-2 w-16 h-16 bg-purple-500/20 rounded-full blur-lg"></div>
+            </div>
           </div>
         </div>
       </div>
