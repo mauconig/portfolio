@@ -47,7 +47,7 @@ export default function Skills() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">
-            Technical <span className="text-blue-400">{t('skills.title')}</span>
+            <span className="text-blue-400">{t('skills.technical')}</span>
           </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
             {t('skills.subtitle')}

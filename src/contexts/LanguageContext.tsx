@@ -37,6 +37,7 @@ const translations = {
 
     // Skills Section
     'skills.title': 'Skills',
+    'skills.technical': 'Technical',
     'skills.subtitle': 'Technologies and tools I use to deliver robust software solutions',
     'skills.frontend': 'Frontend',
     'skills.backend': 'Backend',
@@ -49,10 +50,17 @@ const translations = {
 
     // Recommendations Section
     'recommendations.title': 'Recommendations',
+    'recommendations.professional': 'Professional Recommendations',
     'recommendations.subtitle': 'What colleagues and managers say about working with me',
     'recommendations.cta.title': 'Want to work together?',
     'recommendations.cta.description': 'I\'m always open to discussing new opportunities and challenging projects. Let\'s connect and see how I can contribute to your team\'s success.',
     'recommendations.cta.button': 'Get In Touch',
+
+    // Manuel Guerra Recommendation
+    'recommendations.manuel.title': 'QA Manager with SDET Focus',
+    'recommendations.manuel.subtitle': 'Responsible for QA integrating advanced automation, CI/CD, DevOps and testing throughout the entire lifecycle',
+    'recommendations.manuel.relationship': 'Manuel managed Mauricio directly',
+    'recommendations.manuel.date': 'February 23, 2025',
 
     // Contact Section
     'contact.title': 'Get In Touch',
@@ -94,6 +102,7 @@ const translations = {
 
     // Skills Section
     'skills.title': 'Habilidades',
+    'skills.technical': 'Habilidades Técnicas',
     'skills.subtitle': 'Tecnologías y herramientas que uso para entregar soluciones de software robustas',
     'skills.frontend': 'Frontend',
     'skills.backend': 'Backend',
@@ -106,10 +115,17 @@ const translations = {
 
     // Recommendations Section
     'recommendations.title': 'Recomendaciones',
+    'recommendations.professional': 'Recomendaciones Profesionales',
     'recommendations.subtitle': 'Lo que colegas y gerentes dicen sobre trabajar conmigo',
     'recommendations.cta.title': '¿Quieres trabajar juntos?',
     'recommendations.cta.description': 'Siempre estoy abierto a discutir nuevas oportunidades y proyectos desafiantes. Conectemos y veamos cómo puedo contribuir al éxito de tu equipo.',
     'recommendations.cta.button': 'Contáctame',
+
+    // Manuel Guerra Recommendation
+    'recommendations.manuel.title': 'Gerente de QA con Enfoque SDET',
+    'recommendations.manuel.subtitle': 'Responsable de QA integrando automatización avanzada, CI/CD, DevOps y testing durante todo el ciclo de vida',
+    'recommendations.manuel.relationship': 'Manuel supervisó directamente a Mauricio',
+    'recommendations.manuel.date': '23 de febrero de 2025',
 
     // Contact Section
     'contact.title': 'Ponte en Contacto',

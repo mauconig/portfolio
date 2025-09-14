@@ -3,16 +3,19 @@
 import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
 
-const recommendations = [
-  {
-    id: 1,
-    name: 'Manuel Guerra',
-    title: 'QA Manager with SDET Focus',
-    subtitle: 'Responsible for QA integrating advanced automation, CI/CD, DevOps and testing throughout the entire lifecycle',
-    company: 'ITTI Digital',
-    relationship: 'Manuel managed Mauricio directly',
-    date: 'February 23, 2025',
-    image: '/portfolio/manuel-guerra.jpeg',
+export default function Recommendations() {
+  const { t } = useLanguage()
+
+  const recommendations = [
+    {
+      id: 1,
+      name: 'Manuel Guerra',
+      titleKey: 'recommendations.manuel.title',
+      subtitleKey: 'recommendations.manuel.subtitle',
+      company: 'ITTI Digital',
+      relationshipKey: 'recommendations.manuel.relationship',
+      dateKey: 'recommendations.manuel.date',
+      image: '/portfolio/manuel-guerra.jpeg',
     testimonial: `I had the privilege of working with Mauricio Conigliaro at ITTI, where he stood out as a comprehensive professional in test automation, covering everything from mobile and UI testing to static code analysis and performance testing. His extensive technical knowledge and ability to solve complex problems made him a fundamental pillar within the team.
 
 Among his main achievements and strengths, I highlight:
@@ -28,17 +31,15 @@ Among his main achievements and strengths, I highlight:
 **Teamwork and Collaboration**: His willingness to help and share knowledge enabled the team to face technical challenges with confidence and success.
 
 I recommend Mauricio without hesitation. His technical level, commitment, and automation skills make him an exceptional professional. I am confident that he will continue to make a difference in every challenge he undertakes.`
-  }
-]
+    }
+  ]
 
-export default function Recommendations() {
-  const { t } = useLanguage()
   return (
     <section id="recommendations" className="py-20 bg-gray-800/50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6">
-            Professional <span className="text-blue-400">{t('recommendations.title')}</span>
+            <span className="text-blue-400">{t('recommendations.professional')}</span>
           </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
             {t('recommendations.subtitle')}
@@ -102,13 +103,13 @@ export default function Recommendations() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold text-white">{rec.name}</h3>
-                  <p className="text-blue-400 font-medium text-sm mb-1">{rec.title}</p>
-                  <p className="text-gray-400 text-xs mb-1">{rec.subtitle}</p>
+                  <p className="text-blue-400 font-medium text-sm mb-1">{t(rec.titleKey)}</p>
+                  <p className="text-gray-400 text-xs mb-1">{t(rec.subtitleKey)}</p>
                   <p className="text-gray-400 text-sm">{rec.company}</p>
                   <div className="flex items-center space-x-3 mt-1">
-                    <p className="text-gray-500 text-xs">{rec.relationship}</p>
+                    <p className="text-gray-500 text-xs">{t(rec.relationshipKey)}</p>
                     <span className="text-gray-600">•</span>
-                    <p className="text-gray-500 text-xs">{rec.date}</p>
+                    <p className="text-gray-500 text-xs">{t(rec.dateKey)}</p>
                   </div>
                 </div>
               </div>
